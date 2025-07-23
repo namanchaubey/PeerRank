@@ -1,15 +1,17 @@
-const express = require('express');
-const mongoose = require('mongoose');
-const dotenv = require('dotenv');
-const cors = require('cors');
-const codeRoutes = require('./routes/codeRoutes');
+import express from 'express';
+import mongoose from 'mongoose';
+import dotenv from 'dotenv';
+import cors from 'cors';
+import codeRoutes from './routes/codeRoutes.js';
 
 dotenv.config();
-console.log("MONGO_URI is:", process.env.MONGO_URI); // Debug
+
+console.log("MONGO_URI is:", process.env.MONGO_URI);
 
 const app = express();
 app.use(express.json());
 app.use(cors());
+
 app.use('/api/code', codeRoutes);
 
 mongoose.connect(process.env.MONGO_URI)
