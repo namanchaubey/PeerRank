@@ -14,7 +14,7 @@ const codeSubmissionSchema = new mongoose.Schema({
     default: 'javascript',
   },
   submittedBy: {
-    type: String, // In future: change to ObjectId referencing User
+    type: String, 
     required: true,
   },
   reviews: [
