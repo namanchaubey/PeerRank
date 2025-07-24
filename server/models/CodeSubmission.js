@@ -14,7 +14,7 @@ const codeSubmissionSchema = new mongoose.Schema({
     default: 'javascript',
   },
   submittedBy: {
-    type: String, 
+    type: String, //
     required: true,
   },
   reviews: [
