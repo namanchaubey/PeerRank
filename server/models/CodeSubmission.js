@@ -24,7 +24,7 @@ const codeSubmissionSchema = new mongoose.Schema({
       score: Number, // e.g., 1-10
     },
   ],
-  averageScore: {
+  averageScore: {//
     type: Number,
     default: 0,
   },
